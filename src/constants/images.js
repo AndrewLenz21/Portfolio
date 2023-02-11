@@ -6,6 +6,7 @@ import scrollButton from '../assets/scroll.svg';
 import logoCodePen from '../assets/logoCodePen.svg';
 import aboutImg from '../assets/andrew2.jpg';
 import files from '../assets/files.svg';
+import projectmaxsushi from '../assets/projectmaxsushi.png';
 
 // CURRICULUM
 import CV from '../assets/CV.pdf';
@@ -18,6 +19,8 @@ const images = {
     logoCodePen,
     aboutImg,
     files,
+    // *PROJECTS PICTURES
+    projectmaxsushi,
     // *CURRICULUM *
     CV,
 };

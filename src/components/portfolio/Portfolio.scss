@@ -25,19 +25,49 @@
         width: calc(100%/3);
         max-width: 300px;
         height: 160px;
+        // CURSOR
+        cursor: pointer;
+        // BACKGROUND DESIGN
+        filter: grayscale(1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:hover{
+            filter: grayscale(0);
+            .title__container{
+                .project__title{
+                    padding: 2px 0;
+                    background-color: rgba(255, 255, 255, 0.9);
+                }
+            }
+            .project__data{
+                .project__description{
+                    margin-top: 40px;
+                    color: black;
+                }
+            }
+        }
         
         .title__container{
             width: 100%;
+            
             .project__title{
                 text-align: center;
                 padding: 1rem;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 3px;
+                transition: 200ms;
             }
         }
         .project__data{
             display: flex;
             justify-content: center;
+            margin-top: 5px;
             .project__description{
                 font-size: 0.9rem;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 3px;
+                padding: 5px;
+                transition: 200ms;
             }
         }
     }
