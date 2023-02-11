@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
         </div>
         <span className="footer__message">
-            Built by Andrew Lenz &nbsp;
+            <a href="https://github.com/AndrewLenz21/Portfolio" className='' target="_blank" rel="noreferrer" >Built by Andrew Lenz &nbsp;</a>
             <i class='bx bx-smile' ></i>
         </span>
     </footer>

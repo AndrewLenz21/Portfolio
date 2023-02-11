@@ -26,6 +26,14 @@
             }
         }
     }
+    .footer__message{
+        a{
+            color: var(--title-color);
+            &:hover{
+                font-weight: 300ms;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 350px) {
