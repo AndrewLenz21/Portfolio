@@ -1,0 +1,86 @@
+.home__social{
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 0.25rem;
+    // position 
+    position: fixed;
+    left: 40px;
+    z-index: 10;
+    bottom: 0;
+    // icons
+    .home__social-icon{
+        height: 40px;
+        font-size: 1.25rem;
+        color: var(--title-color);
+        transition: 200ms;
+        //transform: translateY(0);
+        &:hover{
+            color: var(--title-color-dark);
+            transform: translateY(-3.5px);
+        }
+    }
+    // Line after list
+    &::after{
+        content: "";
+        display: block;
+        width: 1px;
+        height: 21vh;
+        margin: 0 auto;
+        background-color: black;
+    }
+}
+.email__send{
+    // position
+    position: fixed;
+    right: 40px;
+    z-index: 10;
+    bottom: 0;
+    .email__link{
+        margin: 15px auto;
+        transition: 200ms;
+        a{
+            font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+            color: var(--title-color);
+            writing-mode: vertical-rl;
+            transition: 200ms;
+        }
+        &:hover{
+            a{
+                color: var(--title-color-dark);
+            }
+            transform: translateY(-3.5px);
+        }
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 1px;
+        height: 21vh;
+        margin: 0 auto;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .home__social{
+        left: 15px;
+        &::after{
+            height: 5vh;
+        }
+    }
+    .email__send{
+        right: 15px;
+        &::after{
+            height: 5vh;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .home__social,
+    .email__send{
+        display: none;
+    }
+}

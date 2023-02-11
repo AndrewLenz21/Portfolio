@@ -1,0 +1,53 @@
+.portfolio{
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+}
+.portfolio__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects__container{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .project__content{
+        background-color: var(--container-color);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 0.5rem;
+        padding-bottom: 1rem;
+        margin: 1rem;
+        // DIMENSIONS
+        width: calc(100%/3);
+        max-width: 300px;
+        height: 160px;
+        
+        .title__container{
+            width: 100%;
+            .project__title{
+                text-align: center;
+                padding: 1rem;
+            }
+        }
+        .project__data{
+            display: flex;
+            justify-content: center;
+            .project__description{
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .projects__container{
+        .project__content{
+            width: 80%;
+            max-width: none;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+
+.home__container{
+    height: 100vh;
+    justify-content: center;
+    //The first row occupies the maximum-height(100vh) minus 5rem
+    grid-template-rows: calc(100vh - 5rem) 3rem;
+    .home__content{
+        //grid-template-columns: 116px repeat(2,1fr);
+        grid-template-columns: 2.5fr 2fr;
+        padding-top: 2.8rem;
+        // Space between columns
+        //column-gap: 2rem;
+        align-items: center;
+        //Margin
+        margin: 0 7rem;
+
+        .home__img {
+            max-width: 550px;
+            max-height: 550px;
+            width: 80%;
+            height: 40%;
+            object-fit: cover;
+            margin: 0 auto;
+
+            border-radius: 10%;
+            animation: profile__animate 8s ease-in-out infinite 2s;
+            box-shadow: 0 0 0 9px rgba(0,0,0,0.3);
+            filter: grayscale(100%);
+            transition: 300ms;
+            &:hover{
+                filter: none;
+            }
+        }
+        .home__data{
+            .home__title{
+                font-size: var(--big-font-size);
+                margin-bottom: var(--mb-0-25);
+                &:hover{
+                    img{
+                        animation: rotation 2s ease infinite;
+                    }
+                }
+            }
+            .home__hand{
+                width: 38px;
+                height: 38px;
+            }
+            .home__subtitle{
+                position: relative;
+                font-size: var(--h3-font-size);
+                font-weight: var(--font-normal);
+                margin-bottom: var(--mb-1);
+
+                padding-left: 3rem;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 2.75rem;
+                    height: 1px;
+                    background-color: var(--text-color);
+                    left: 0;
+                    top: 0.8rem;
+                }
+            }
+            .home__description{
+                max-width: 400px;
+                text-align: justify;
+                margin-bottom: var(--mb-3);
+            }
+            .send__button{
+                img,
+                .text{
+                    transition: 300ms;
+                }
+                &:hover{
+                    .text{
+                        transform:translateX(3px) scale(1.03);
+                    }
+                    img{
+                        animation: send_icon 2s ease infinite;
+                    }
+                }
+            }
+        }
+          
+    }
+    .scroll__content{
+        height: 3rem;
+        bottom: 0;
+        .home__scroll{
+            margin-left: 8rem;
+            // animation
+            .home__scroll-button{
+                img{
+                    animation: scroll 2s ease infinite;
+                }
+                .home__scroll-name{
+                    color: var(--title-color);
+                    font-weight: var(--font-medium);
+                    margin-right: var(--mb-0-25);
+                    margin-left: 2px;
+                }
+                .home__scroll-arrow{
+                    font-size: 1.25rem;
+                    color: var(--title-color);
+                }
+            }
+            &:hover{
+                .home__scroll-arrow{
+                    animation: stire 2s ease infinite;
+                }
+            }
+        }
+    }
+}
+
+// *Small Devices, Responsive Design
+
+@media screen and (max-width: 950px) {
+    .home__container{
+        .home__content{
+            column-gap: 1.25rem;
+            grid-template-columns: 2fr 2fr;
+            .home__data{
+                .home__title{
+                    font-size: 2.4rem;
+                    margin-bottom: var(--mb-0-25);
+                }
+                .home__hand{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    .home__container{
+        grid-template-rows: calc(100vh - 5rem) 3rem;
+        .home__content{
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 2fr;
+            padding-top: 3rem;
+            margin: 3rem 2rem 0rem;
+            .home__data{
+                order: 1;
+            }
+            .home__img{
+                order: 2;
+                height: 80%;
+                width: 70%;
+            }
+        }
+        .scroll__content{
+            height: 3rem;
+        }
+    }
+}
+
+
+// Animation for the profilePhoto
+@keyframes profile__animate{
+    0% {
+        border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+    }
+    30% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    60% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+// Animation for the scrollButton
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(0.3rem);
+    }
+}
+@keyframes stire{
+    0%{
+        transform: scaleY(1);
+    }
+    10%{
+        transform: scaleY(1.4);
+    }
+}
+@keyframes send_icon{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    60%{
+        transform: translateX(7px) rotate(45deg);
+    }
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(21deg);
+    }
+    
+}

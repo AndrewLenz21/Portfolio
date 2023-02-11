@@ -1,0 +1,43 @@
+.about__info{
+    margin-bottom: var(--mb-1);
+    max-width: 300px;
+    .about__box{
+        background-color: var(--container-color);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 0.75rem;
+        text-align: center;
+        padding: 0.1rem 1rem;
+
+        
+        
+        .about__title{
+            font-size: var(--small-font-size);
+            font-weight: var(--font-medium);
+        }
+        .about__icon{
+            font-size: 1.1rem;
+            color: var(--title-color);
+            display: inline-flex;
+            margin-top: 3px;
+        }
+        .about__subtitle{
+            font-size: 0.8rem;
+        }
+        &:hover{
+            .about__icon{
+                transform-origin: center;
+                animation: rotation 2s ease infinite;
+            }
+        }
+    }
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    
+}
