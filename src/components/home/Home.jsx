@@ -2,7 +2,6 @@ import React from 'react'
 import "./Home.scss";
 
 import ScrollDown from './ScrollDown';
-import Social from '../social/Social';
 import Data from './Data';
 
 
