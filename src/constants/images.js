@@ -10,7 +10,7 @@ import files from '../assets/files.svg';
 // CURRICULUM
 import CV from '../assets/CV.pdf';
 
-export default {
+const images = {
     handIcon,
     sendIcon,
     profilePhoto,
@@ -21,3 +21,5 @@ export default {
     // *CURRICULUM *
     CV,
 };
+
+export default images;
