@@ -29,8 +29,9 @@
     .footer__message{
         a{
             color: var(--title-color);
+            transition: 200ms;
             &:hover{
-                font-weight: 300ms;
+                color: darkblue;
             }
         }
     }
