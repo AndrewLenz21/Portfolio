@@ -9,7 +9,7 @@ import files from '../assets/files.svg';
 import projectmaxsushi from '../assets/projectmaxsushi.png';
 
 // CURRICULUM
-import CV from '../assets/CV.pdf';
+import CV from '../assets/CV_english.pdf';
 
 const images = {
     handIcon,

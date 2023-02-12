@@ -4,7 +4,7 @@ const Frontend = () => {
   return (
     <div className="skills__content">
         <div className="title__container">
-            <h3 className="skills__title">Frontend Developer</h3>
+            <h3 className="skills__title">Fron-tend Developer</h3>
         </div>
         <div className="skills__box">
 
